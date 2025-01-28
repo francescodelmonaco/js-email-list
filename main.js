@@ -2,6 +2,9 @@ const mailList = document.getElementById("mailList");
 const btn = document.getElementById("btn");
 
 function generator() {
+    mailList.innerHTML = "";
+    console.clear();
+
     for (let i = 0; i < 10; i++) {
         fetch("https://flynn.boolean.careers/exercises/api/random/mail", { method: "GET" })
             .then(response => response.json())
