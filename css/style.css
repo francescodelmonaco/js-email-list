@@ -9,8 +9,8 @@ html {
 :root {
     --color-black: #000000;
     --color-blue: #050647;
-    --color-green: rgb(41, 130, 146, 0.3);
-    --color-lightblue: #d5e5e9;
+    --color-green: rgb(41, 130, 146, 0.2);
+    --color-lightblue: #deeff3;
 }
 
 .flex-90 {
