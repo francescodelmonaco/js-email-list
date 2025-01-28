@@ -2,18 +2,18 @@
     font-family: sans-serif;
 }
 
-html {
-    background-color: var(--color-lightblue);
-}
-
 :root {
-    --color-black: #000000;
     --color-blue: #050647;
-    --color-green: rgb(41, 130, 146, 0.2);
-    --color-lightblue: #deeff3;
+    --color-lightblue: rgb(5, 6, 71, 0.2);
+    --color-white: #fff;
 }
 
-.flex-90 {
+.text-center {
+    text-align: center;
+}
+
+/* body */
+body {
     margin: 0 auto;
     max-width: 90%;
 
@@ -23,11 +23,6 @@ html {
     align-items: center;
 }
 
-.text-center {
-    text-align: center;
-}
-
-/* body */
 h1,
 p {
     color: var(--color-blue);
@@ -40,19 +35,20 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 0;
 }
 
 li {
     padding: 0.7rem 0;
-    background-color: var(--color-green);
+    background-color: var(--color-lightblue);
     width: 30rem;
+    border-radius: 2rem;
 }
 
 button {
-    color: var(--color-lightblue);
+    color: var(--color-white);
     background-color: var(--color-blue);
     border: 0;
+    border-radius: 2rem;
     padding: 0.7rem 0;
     width: 30rem;
     font-size: large;
