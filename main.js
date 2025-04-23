@@ -1,6 +1,5 @@
 const mailList = document.getElementById("mailList");
 const btn = document.getElementById("btn");
-const copyBtn = document.querySelectorAll(".copy");
 
 function generator() {
     mailList.innerHTML = "";
@@ -23,6 +22,21 @@ function generator() {
                     </div>
                 </li>
                 `;
+
+                const copyButtons = document.querySelectorAll(".copy");
+
+                copyButtons.forEach(button => {
+                    button.addEventListener("click", (event) => {
+                        const email = event.target.closest("div").querySelector(".mail").textContent;
+                        navigator.clipboard.writeText(email)
+                            .then(() => {
+                                // alert("Email copiata negli appunti!");
+                            })
+                            .catch(err => {
+                                console.error("Errore durante la copia:", err);
+                            });
+                    });
+                });
             })
 
             .catch(error => {
